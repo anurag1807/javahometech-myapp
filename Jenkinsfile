@@ -3,16 +3,17 @@ pipeline  {
   parameters   {
       string(name: 'x', defaultValue: '10', description: 'Enter the value of x')
   }
+  
+  environment {
+             x = 20 
+  }
   stages   {
      stage("1")      
     {
-      environment {
-             x = 20 
-      }
-        
+              
         steps       
         {
-             echo "Stage1 -- Value of x is  ${x}"
+             echo "Stage1 -- Value of x is  ${env.x}"
         }     
      }
       
