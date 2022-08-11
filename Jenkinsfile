@@ -1,14 +1,18 @@
 pipeline 
 {
   agent any
-  
+  environment
+  {
+      x = 10
+  }
   stages
   {
      stage("1")
      {
         steps
         {
-             echo "hello stage1"
+          echo "hello stage1 ${x}"
+          echo "hello stage1 $x"
         }
      
      }
@@ -17,9 +21,10 @@ pipeline
      {
         steps
         {
-             echo "hello stage2"
-             sh "echo inside double quotes"
-             sh 'echo inside single quotes'
+             sh "echo stage2 ${x}"
+             sh "echo stage2 $x"
+             sh 'echo stage2 ${x}'
+             sh 'echo stage2 $x'
         }
      
      }
