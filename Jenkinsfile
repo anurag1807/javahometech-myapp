@@ -2,7 +2,6 @@ def x = 10
 
 pipeline  {
   agent any
-  def y = 20
   
   stages   {
      stage("1")      
