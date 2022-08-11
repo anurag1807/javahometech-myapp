@@ -1,4 +1,4 @@
-def z = 99
+def m = 99
   
 pipeline  {
   agent any
