@@ -20,7 +20,7 @@ pipeline  {
             script {  
                    def y = 20 
                    echo "Stage2 -- Value of y is  ${y}"
-                   env.z = ${y}-${BUILD_NUMBER}
+                   env.z = "${y}-${BUILD_NUMBER}"
              }
           echo "Stage2 -- Value of z is  ${z}"
         }     
