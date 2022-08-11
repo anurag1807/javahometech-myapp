@@ -9,7 +9,6 @@ pipeline
   {
      stage("1")
      {
-       
         environment
         {
            x = 3
@@ -23,8 +22,7 @@ pipeline
           }
           echo "hello  ${x}"
           echo "hello  ${y}"
-        }
-     
+        }     
      }
       
      stage('2')
@@ -35,9 +33,6 @@ pipeline
              echo "hello  ${y}"
         }
      
-     }
-  
-  
+     }  
    }
-
 }
