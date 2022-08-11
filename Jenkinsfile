@@ -12,9 +12,10 @@ pipeline
        
         steps
         {
-          
+          script {
           env.x = 20
           env.y = 30
+          }
           echo "hello stage1 ${x}"
           echo "hello stage1 ${env.y}"
         }
