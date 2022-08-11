@@ -16,7 +16,7 @@ pipeline  {
        
         steps       
         {
-          echo "Stage1 -- Value of x is ${x} , env x is ${env.x} and y is {y}"
+          echo "Stage1 -- Value of x is ${x} , env x is ${env.x} and y is ${y} , env y is ${env.y}"
         }     
      }
       
