@@ -1,4 +1,5 @@
 def x = 10
+def y = 20
 
 pipeline  {
   agent any
