@@ -1,38 +1,30 @@
-pipeline 
-{
+pipeline  {
   agent any
-  environment
-  {
+  environment   {
       x = 1
   }
-  stages
-  {
-     stage("1")
-     {
-        environment
-        {
-           x = 3
-           y = 4
+  stages   {
+     stage("1")      {
+        environment         {
+            x = 3
+            y = 4
         }
-        steps
-        {
-          script {
-          env.x = 5
-          env.y = 6
+        steps         {
+            script {
+            env.x = 5
+            env.y = 6
           }
-          echo "hello  ${x}"
-          echo "hello  ${y}"
+            echo "hello  ${x}"
+            echo "hello  ${y}"
         }     
      }
       
-     stage('2')
-     {
+     stage('2')       {
         steps
         {
              echo "hello  ${x}"
              echo "hello  ${y}"
-        }
-     
+        }     
      }  
    }
 }
