@@ -1,12 +1,10 @@
-def x=10
-
 pipeline  {
   agent any
    environment {
-             x = 20 
+             x = 10
   }
     parameters   {
-      string(name: 'x', defaultValue: '30', description: 'Enter the value of x')
+      string(name: 'x', defaultValue: '20', description: 'Enter the value of x')
   }
   
   stages   {
@@ -15,7 +13,7 @@ pipeline  {
        
         steps       
         {
-          echo "Stage1 -- Value of x is ${x} , env x is ${env.x} and y is ${y} , env y is ${env.y}"
+          echo "Stage1 -- Value of x is ${x}"
         }     
      }
       
@@ -24,9 +22,13 @@ pipeline  {
         
         steps
         {
-            
+          script {
+                   def z = 50
+                   env.z = 60
+                   echo "Stage2 -- Script -- Value of z is  ${z} and env z is ${env.z}"
+          }
           echo "Stage2 -- Value of x is  ${params.x}"
-          echo "Stage2 -- Value of x is  ${env.x}"
+          echo "Stage2 -- Value of z is  ${z} and env z is ${env.z}"
         }     
      }  
    }
