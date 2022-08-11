@@ -12,7 +12,7 @@ pipeline  {
         
         steps       
         {
-             echo "Stage1 -- Value of x is  ${params.x}"
+             echo "Stage1 -- Value of x is  ${env.x}"
         }     
      }
       
