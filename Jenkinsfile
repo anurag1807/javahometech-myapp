@@ -10,7 +10,7 @@ pipeline  {
        
         steps       
         {
-             echo "Stage1 -- Value of x is  ${x}"
+             echo "Stage1 -- Value of x   ${x}"
         }     
      }
       
