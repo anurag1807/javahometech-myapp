@@ -1,16 +1,13 @@
+def x = 10
+
 pipeline  {
   agent any
-  parameters   {
-      string(name: 'x', defaultValue: '20', description: 'Enter the value of x')
-  }
+  def y = 20
   
-  environment {
-             x = 10 
-  }
   stages   {
      stage("1")      
     {
-              
+       
         steps       
         {
              echo "Stage1 -- Value of x is  ${x}"
@@ -21,7 +18,7 @@ pipeline  {
     {
         steps
         {
-             echo "Stage2 -- Value of x is  ${param.x}"
+             echo "Stage2 -- Value of y is  ${y}"
         }     
      }  
    }
