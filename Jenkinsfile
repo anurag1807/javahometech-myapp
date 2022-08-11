@@ -1,29 +1,23 @@
 pipeline  {
   agent any
-  environment   {
-      x = 1
+  parameters   {
+      string(name: x, defaultValue: 10, Description: Enter the value of x)
   }
   stages   {
-     stage("1")      {
-        environment         {
-            x = 3
-            y = 4
-        }
-        steps         {
-            script {
-            env.x = 5
-            env.y = 6
-          }
-            echo "Stage1 -- Valkue of x is  ${x}"
-            echo "Stage1 -- Valkue of y is  ${y}"
+     stage("1")      
+    {
+
+        steps         
+         {
+            echo "Stage1 -- Value of x is  ${x}"
         }     
      }
       
-     stage('2')       {
+     stage('2')       
+    {
         steps
         {
-             echo "Stage2 -- Valkue of x is  ${x}"
-             echo "Stage2 -- Valkue of y is  ${y}"
+             echo "Stage2 -- Value of x is  ${x}"
         }     
      }  
    }
