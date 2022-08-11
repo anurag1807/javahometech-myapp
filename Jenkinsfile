@@ -1,11 +1,11 @@
 pipeline  {
   agent any
   parameters   {
-      string(name: 'x', defaultValue: '10', description: 'Enter the value of x')
+      string(name: 'x', defaultValue: '20', description: 'Enter the value of x')
   }
   
   environment {
-             x = 20 
+             x = 10 
   }
   stages   {
      stage("1")      
@@ -21,7 +21,7 @@ pipeline  {
     {
         steps
         {
-             echo "Stage2 -- Value of x is  ${params.x}"
+             echo "Stage2 -- Value of x is  ${param.x}"
         }     
      }  
    }
