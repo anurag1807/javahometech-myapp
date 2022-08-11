@@ -14,16 +14,16 @@ pipeline  {
             env.x = 5
             env.y = 6
           }
-            echo "hello  ${x}"
-            echo "hello  ${y}"
+            echo "Stage1 -- Valkue of x is  ${x}"
+            echo "Stage1 -- Valkue of y is  ${y}"
         }     
      }
       
      stage('2')       {
         steps
         {
-             echo "hello  ${x}"
-             echo "hello  ${y}"
+             echo "Stage2 -- Valkue of x is  ${x}"
+             echo "Stage2 -- Valkue of y is  ${y}"
         }     
      }  
    }
