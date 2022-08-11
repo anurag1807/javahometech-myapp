@@ -18,7 +18,6 @@ pipeline  {
         {
                   
           script {
-                   def x = 50
                    echo "Stage2 -- Script -- Value of x is  ${x}"
           }
           echo "Stage2 -- Value of x is  ${x}"
