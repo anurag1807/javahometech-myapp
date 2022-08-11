@@ -4,6 +4,7 @@ pipeline  {
   agent any
    environment {
              x = 10
+             z = 70
   }
     parameters   {
       string(name: 'x', defaultValue: '20', description: 'Enter the value of x')
