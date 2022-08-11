@@ -14,10 +14,11 @@ pipeline  {
       
      stage('2')       
     {
-        def y = 20
+        
         steps
         {
-             echo "Stage2 -- Value of y is  ${y}"
+            def y = 20 
+            echo "Stage2 -- Value of y is  ${y}"
         }     
      }  
    }
