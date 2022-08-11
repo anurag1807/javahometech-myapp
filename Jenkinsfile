@@ -3,7 +3,8 @@ pipeline
   agent any
   environment
   {
-      x = 10
+      x = 1
+      y = 2
   }
   stages
   {
@@ -13,11 +14,11 @@ pipeline
         steps
         {
           script {
-          env.x = 20
-          env.y = 30
+          env.x = 5
+          env.y = 6
           }
           echo "hello stage1 ${x}"
-          echo "hello stage1 ${env.y}"
+          echo "hello stage1 ${y}"
         }
      
      }
@@ -27,7 +28,7 @@ pipeline
         steps
         {
              sh "echo stage2 ${x}"
-             echo "hello stage2 ${env.y}"
+             echo "hello stage2 ${y}"
         }
      
      }
