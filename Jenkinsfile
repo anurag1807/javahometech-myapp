@@ -1,4 +1,4 @@
-def x=10
+def x=1000
 
 pipeline  {
   agent any
@@ -15,7 +15,7 @@ pipeline  {
        
         steps       
         {
-             echo "Stage1 -- Value of x ${env.x}"
+             echo "Stage1 -- Value of x ${x}"
         }     
      }
       
