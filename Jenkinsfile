@@ -1,3 +1,5 @@
+def z = 99
+  
 pipeline  {
   agent any
    environment {
