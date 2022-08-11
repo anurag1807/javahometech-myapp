@@ -6,13 +6,14 @@ pipeline  {
   stages   {
      stage("1")      
     {
-       parameters   
-        {
-             string(name: 'x', defaultValue: '20', description: 'Enter the value of x')
-        }
+       
         steps         
         {
-            echo "Stage1 -- Value of x is  ${params.x}"
+            parameters   
+            {
+             string(name: 'x', defaultValue: '20', description: 'Enter the value of x')
+            }
+          echo "Stage1 -- Value of x is  ${params.x}"
         }     
      }
       
