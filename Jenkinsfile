@@ -20,7 +20,6 @@ pipeline
              echo "hello stage2"
              sh "echo inside double quotes"
              sh 'echo inside single quotes'
-             sh echo "hellow world"
         }
      
      }
