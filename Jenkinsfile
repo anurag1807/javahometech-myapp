@@ -10,11 +10,8 @@ pipeline
      stage("1")
      {
        
-        environment
-        {
-            x = 20
-            y = 30
-        }
+        env.x = 20
+        env.y = 30
         steps
         {
           echo "hello stage1 ${x}"
