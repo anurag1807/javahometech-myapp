@@ -22,13 +22,13 @@ pipeline  {
       
      stage('2')       
     {
-        
+
+        environment {
+             z = 99
+        }      
         steps
         {
-          environment {
-             z = 99
-          }
-          
+                  
           script {
                    def z = 50
                    env.z = 60
