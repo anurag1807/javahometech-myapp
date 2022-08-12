@@ -17,6 +17,7 @@ pipeline  {
         {
           sshagent(['server2-cred']) {
             sh 'ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 uname -a'
+            sh 'ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 cat 1.txt'
           }
         }     
      }  
