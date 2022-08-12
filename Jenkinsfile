@@ -15,7 +15,9 @@ pipeline  {
     {   
         steps
         {
-          sh 'mvn package'
+          script {
+            mvn clean package
+          }
         }     
      }  
    }
