@@ -15,7 +15,7 @@ pipeline  {
     {   
         steps
         {
-          mvn -v
+          sh "mvn -v"
         }     
      }  
    }
