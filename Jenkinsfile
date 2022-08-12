@@ -3,7 +3,7 @@ def x = 10
 pipeline  {
   agent any  
   stages   {
-     stage("1")      
+     stage("1.1")      
     {
        
         steps       
