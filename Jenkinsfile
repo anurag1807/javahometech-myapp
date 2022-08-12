@@ -16,7 +16,8 @@ pipeline  {
         steps
         {
           sshagent(['server2-cred']) {
-            sh 'ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 docker ps'
+            sh 'ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 docker pull alpine:latest'
+            sh 'ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 docker images'
           }
         }     
      }  
