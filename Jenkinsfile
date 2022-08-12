@@ -15,8 +15,8 @@ pipeline  {
     {   
         steps
         {
-          script {
-            sh 'mvn clean package'
+          sshagent(['server2-cred']) {
+            sh 'ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 uname -a'
           }
         }     
      }  
