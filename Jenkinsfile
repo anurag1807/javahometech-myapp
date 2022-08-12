@@ -18,8 +18,8 @@ pipeline  {
         steps
         {
             sshagent(['server2-cred']) {
-            sh 'ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 ${cmd1}'
-            sh 'ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 ${cmd2}'
+            sh "ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 ${cmd1}"
+            sh "ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 ${cmd2}"
           }
         }     
      }  
