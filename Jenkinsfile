@@ -1,4 +1,6 @@
 def x = 10
+def cmd1 = 'docker pull alpine:latest'
+def cmd2 = 'docker images'
   
 pipeline  {
   agent any  
@@ -15,10 +17,9 @@ pipeline  {
     {   
         steps
         {
-          def cmd = 'docker pull alpine:latest'
-          sshagent(['server2-cred']) {
-            sh 'ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 ${cmd}'
-            sh 'ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 docker images'
+            sshagent(['server2-cred']) {
+            sh 'ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 ${cmd1}'
+            sh 'ssh -o StrictHostKeyChecking=no jenkins@52.87.228.97 ${cmd2}'
           }
         }     
      }  
